@@ -1,0 +1,1820 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ahl-e-Bayt — Sacred Family</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap">
+
+<style>
+/* ─── Layout: left sidebar (tabs) + right content panel, stacking on mobile ─── */
+:root {
+  --green-deep:    #0d3d2b;
+  --green-mid:     #1a5c3f;
+  --green-soft:    #2e7d52;
+  --green-pale:    #d4ead9;
+  --green-wash:    #eef7f1;
+  --gold:          #b8973a;
+  --gold-light:    #e8d07a;
+  --cream:         #faf8f2;
+  --ink:           #1a1a18;
+  --ink-muted:     #4a5244;
+  --border:        rgba(30,90,60,0.15);
+  --sidebar-bg:    #0d3d2b;
+  --sidebar-fg:    #c8e6d4;
+  --sidebar-hover: rgba(255,255,255,0.08);
+  --sidebar-active:#1a5c3f;
+  --card-bg:       #ffffff;
+  --note-bg:       #f0f7f2;
+  --prophet-bg:    linear-gradient(135deg, #0d3d2b 0%, #1a5c3f 60%, #2e7d52 100%);
+  --shadow:        0 2px 16px rgba(13,61,43,0.10);
+  --radius:        10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --green-deep:    #071e14;
+    --green-mid:     #0f3324;
+    --green-soft:    #1a5c3f;
+    --green-pale:    #0e3323;
+    --green-wash:    #0a2018;
+    --gold:          #c9a84c;
+    --gold-light:    #e8d07a;
+    --cream:         #0d1a12;
+    --ink:           #e8f0eb;
+    --ink-muted:     #8ab49a;
+    --border:        rgba(50,140,90,0.18);
+    --sidebar-bg:    #041009;
+    --sidebar-fg:    #8ab49a;
+    --sidebar-hover: rgba(255,255,255,0.06);
+    --sidebar-active:#0f3324;
+    --card-bg:       #0d1f15;
+    --note-bg:       #091a10;
+    --prophet-bg:    linear-gradient(135deg, #041009 0%, #0d3324 60%, #1a5c3f 100%);
+    --shadow:        0 2px 16px rgba(0,0,0,0.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+    --green-deep:    #071e14;
+    --green-mid:     #0f3324;
+    --green-soft:    #1a5c3f;
+    --green-pale:    #0e3323;
+    --green-wash:    #0a2018;
+    --gold:          #c9a84c;
+    --gold-light:    #e8d07a;
+    --cream:         #0d1a12;
+    --ink:           #e8f0eb;
+    --ink-muted:     #8ab49a;
+    --border:        rgba(50,140,90,0.18);
+    --sidebar-bg:    #041009;
+    --sidebar-fg:    #8ab49a;
+    --sidebar-hover: rgba(255,255,255,0.06);
+    --sidebar-active:#0f3324;
+    --card-bg:       #0d1f15;
+    --note-bg:       #091a10;
+    --prophet-bg:    linear-gradient(135deg, #041009 0%, #0d3324 60%, #1a5c3f 100%);
+    --shadow:        0 2px 16px rgba(0,0,0,0.35);
+    color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-left: max(0px, env(safe-area-inset-left, 0px));
+  padding-right: max(0px, env(safe-area-inset-right, 0px));
+}
+
+/* ─── Prophet Banner ─── */
+.prophet-banner {
+  background: var(--prophet-bg);
+  color: #fff;
+  text-align: center;
+  padding: 2rem max(24px, env(safe-area-inset-left, 0px));
+  border-bottom: 3px solid var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+.prophet-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(184,151,58,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(184,151,58,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.bismillah {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.banner-title {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.4rem;
+}
+.prophet-name {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--gold-light);
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+}
+.prophet-title-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-style: italic;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0.25rem;
+}
+.salawat {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+  color: var(--gold-light);
+  display: block;
+  margin-top: 0.25rem;
+}
+.page-subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ─── Layout Shell ─── */
+.shell {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ─── Sidebar ─── */
+.sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 0;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  min-height: calc(100vh - 160px);
+  border-right: 1px solid rgba(184,151,58,0.2);
+}
+.sidebar-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(200,230,212,0.4);
+  padding: 0 1.25rem 0.75rem;
+  font-family: 'Inter', sans-serif;
+}
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--sidebar-fg);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.95rem;
+  text-align: left;
+  width: 100%;
+  transition: background 0.18s, color 0.18s;
+  border-left: 3px solid transparent;
+  line-height: 1.3;
+}
+.tab-btn:hover {
+  background: var(--sidebar-hover);
+  color: #fff;
+}
+.tab-btn.active {
+  background: var(--sidebar-active);
+  color: #fff;
+  border-left-color: var(--gold);
+}
+.tab-btn .icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 1.4rem;
+  text-align: center;
+}
+.tab-btn .label {
+  line-height: 1.3;
+}
+.tab-btn .label .en { display: block; font-weight: 600; }
+.tab-btn .label .ar {
+  display: block;
+  font-family: 'Scheherazade New', serif;
+  font-size: 0.82rem;
+  color: rgba(200,230,212,0.6);
+  margin-top: 0.1rem;
+}
+.tab-btn.active .label .ar { color: rgba(255,255,255,0.6); }
+.sidebar-ornament {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.3rem;
+  color: rgba(184,151,58,0.4);
+  letter-spacing: 0.3em;
+}
+
+/* ─── Content Area ─── */
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem max(24px, env(safe-area-inset-right, 0px)) 3rem max(24px, 1.5rem);
+  overflow-y: auto;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ─── Panel Header ─── */
+.panel-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.panel-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green-soft);
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.35rem;
+}
+.panel-title-ar {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--green-deep);
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+.panel-title-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+/* ─── Nasab Tree ─── */
+.nasab-intro {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: 1.75rem;
+  max-width: 65ch;
+}
+
+/* Prophet node (root of tree) */
+.prophet-node {
+  background: var(--prophet-bg);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  margin-bottom: 0;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(13,61,43,0.25);
+}
+.prophet-node::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 2rem;
+  background: var(--gold);
+  margin: 0 auto;
+}
+.prophet-node .pn-title {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 0.4rem;
+}
+.prophet-node .pn-name-ar {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.5rem;
+  color: var(--gold-light);
+  display: block;
+}
+.prophet-node .pn-name-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1rem;
+  color: #fff;
+  font-style: italic;
+  display: block;
+  margin-top: 0.2rem;
+}
+.prophet-node .pn-salawat {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.2rem;
+  color: var(--gold-light);
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* Split columns for paternal/maternal */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  position: relative;
+  margin-bottom: 0;
+}
+.split-section::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold) 0%, var(--border) 100%);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.split-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+.split-header {
+  background: var(--green-soft);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+.split-col.maternal .split-header { background: var(--gold); color: var(--green-deep); }
+
+/* Ancestor node */
+.anc-node {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  position: relative;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+.anc-node:hover { box-shadow: 0 4px 20px rgba(13,61,43,0.15); }
+.anc-node.prophet-ancestor {
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  border-color: var(--gold);
+}
+.anc-node.notable {
+  border-color: var(--gold);
+  border-width: 1.5px;
+}
+.anc-node.rasul-level {
+  background: linear-gradient(135deg, var(--green-mid), var(--green-soft));
+  border-color: var(--gold);
+  border-width: 2px;
+}
+.anc-node.nbprophet {
+  border-color: var(--gold);
+  background: var(--note-bg);
+}
+
+.an-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  line-height: 1.3;
+}
+.anc-node.prophet-ancestor .an-en,
+.anc-node.rasul-level .an-en { color: #fff; }
+
+.an-ar {
+  font-family: 'Scheherazade New', serif;
+  font-size: 0.95rem;
+  color: var(--green-soft);
+  display: block;
+  margin-top: 0.1rem;
+  line-height: 1.4;
+}
+.anc-node.prophet-ancestor .an-ar,
+.anc-node.rasul-level .an-ar { color: var(--gold-light); }
+
+.an-as {
+  font-family: 'Scheherazade New', serif;
+  font-size: 0.78rem;
+  color: var(--gold);
+  display: block;
+  margin-top: 0.05rem;
+}
+.anc-node.prophet-ancestor .an-as { color: rgba(232,208,122,0.8); }
+
+.an-note {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+  display: block;
+  line-height: 1.35;
+}
+.anc-node.prophet-ancestor .an-note,
+.anc-node.rasul-level .an-note { color: rgba(255,255,255,0.65); }
+
+/* Connector lines between nodes */
+.connector {
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold) 0%, var(--border) 100%);
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+.connector-gold { background: var(--gold); }
+
+/* Merge node (after split) */
+.merge-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.merge-header {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  margin-bottom: 0;
+  position: relative;
+}
+.merge-line {
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+}
+.merge-label {
+  background: var(--green-wash);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-soft);
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* Adnan note box */
+.adnan-note {
+  background: var(--note-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  max-width: 520px;
+  width: 100%;
+}
+.adnan-note .note-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+.adnan-note p {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+/* Nasab list view (shared ancestors) */
+.nasab-chain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-bottom: 2rem;
+}
+
+/* ─── Ummahat section ─── */
+.wives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.wife-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+.wife-card:hover { box-shadow: 0 4px 24px rgba(13,61,43,0.15); }
+.wife-card.ummul-ummul { border-color: var(--gold); border-width: 1.5px; }
+.wc-num {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.wc-name-ar {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.25rem;
+  color: var(--green-deep);
+  display: block;
+  line-height: 1.4;
+}
+.wc-as {
+  font-family: 'Scheherazade New', serif;
+  font-size: 0.9rem;
+  color: var(--gold);
+  display: block;
+}
+.wc-name-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  margin-top: 0.25rem;
+}
+.wc-title {
+  font-size: 0.78rem;
+  color: var(--green-soft);
+  font-style: italic;
+  font-family: 'Crimson Pro', Georgia, serif;
+  display: block;
+  margin-top: 0.15rem;
+}
+.wc-summary {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink);
+  line-height: 1.65;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border);
+}
+.wc-row {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.wc-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-soft);
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+.wc-val {
+  font-size: 0.82rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.wc-tribe {
+  display: inline-block;
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--green-wash);
+  color: var(--green-soft);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.1rem 0.55rem;
+  margin-top: 0.35rem;
+}
+.wc-grave {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin-top: 0.3rem;
+  padding-top: 0.3rem;
+  border-top: 1px dashed var(--border);
+}
+
+/* ─── Abna' wa Banat ─── */
+.children-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.children-group h3 {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.3rem;
+  color: var(--green-deep);
+  margin-bottom: 0.25rem;
+}
+.children-group .group-sub {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.child-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+  box-shadow: var(--shadow);
+}
+.child-item .ci-ar {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1rem;
+  color: var(--green-soft);
+}
+.child-item .ci-as {
+  font-family: 'Scheherazade New', serif;
+  font-size: 0.78rem;
+  color: var(--gold);
+  margin-left: 0.3rem;
+}
+.child-item .ci-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  margin-top: 0.1rem;
+}
+.child-item .ci-note {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+  display: block;
+  font-family: 'Crimson Pro', Georgia, serif;
+  line-height: 1.4;
+}
+.child-item.from-khadijah { border-left: 3px solid var(--gold); }
+.child-item.from-mariyah  { border-left: 3px solid var(--green-soft); }
+
+/* ─── Ummi Ba'da Ummi ─── */
+.milk-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+.milk-card h4 {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.25rem;
+  color: var(--green-deep);
+}
+.milk-card .mc-as {
+  font-family: 'Scheherazade New', serif;
+  font-size: 0.88rem;
+  color: var(--gold);
+  margin-left: 0.3rem;
+}
+.milk-card .mc-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  display: block;
+  margin-top: 0.2rem;
+}
+.milk-card .mc-role {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-soft);
+  font-family: 'Inter', sans-serif;
+  margin-top: 0.15rem;
+  display: block;
+}
+.milk-card .mc-body {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.93rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border);
+}
+.milk-siblings { margin-top: 1.5rem; }
+.milk-siblings h3 {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.2rem;
+  color: var(--green-deep);
+  margin-bottom: 1rem;
+}
+.sibling-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+.sib-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  box-shadow: var(--shadow);
+}
+.sib-item .si-ar {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1rem;
+  color: var(--green-soft);
+}
+.sib-item .si-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  margin-top: 0.1rem;
+}
+.sib-item .si-note {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  font-style: italic;
+  font-family: 'Crimson Pro', Georgia, serif;
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* ─── Coming soon placeholder ─── */
+.coming-soon {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--ink-muted);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+}
+.coming-soon .cs-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  opacity: 0.4;
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 680px) {
+  .shell { flex-direction: column; }
+  .sidebar {
+    width: 100%;
+    min-height: unset;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    gap: 0.25rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(184,151,58,0.2);
+    justify-content: center;
+  }
+  .sidebar-label, .sidebar-ornament { display: none; }
+  .tab-btn {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.8rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    width: auto;
+    gap: 0.2rem;
+    border-radius: 6px 6px 0 0;
+  }
+  .tab-btn.active { border-left-color: transparent; border-bottom-color: var(--gold); }
+  .tab-btn .label .ar { display: none; }
+  .tab-btn .icon { width: auto; }
+  .content { padding: 1.25rem max(16px, env(safe-area-inset-right, 0px)) 2rem max(16px, env(safe-area-inset-left, 0px)); }
+  .split-section { grid-template-columns: 1fr; }
+  .split-section::before { display: none; }
+  .children-cols { grid-template-columns: 1fr; gap: 1.5rem; }
+  .prophet-banner { padding: 1.25rem 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+
+<!-- ─── Prophet Banner ─── -->
+<div class="prophet-banner">
+  <span class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</span>
+  <div class="banner-title">Sacred Family of</div>
+  <div class="prophet-name">خَيْرُ خَلْقِ اللهِ، خَيْرُ الْبَرِيَّةِ، نُورٌ مُجَسَّمٌ، حَبِيبُ اللهِ</div>
+  <div class="prophet-title-en">The Choicest of Creation, the Light Made Manifest, the Beloved of Allāh</div>
+  <span class="salawat">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>
+  <div class="page-subtitle">Ahl-e-Bayt — The Blessed Family</div>
+</div>
+
+<!-- ─── Shell ─── -->
+<div class="shell">
+
+  <!-- Sidebar -->
+  <nav class="sidebar" role="navigation" aria-label="Sections">
+    <div class="sidebar-label">Sections</div>
+
+    <button class="tab-btn active" onclick="showTab('nasab')" aria-controls="nasab">
+      <span class="icon">📜</span>
+      <span class="label">
+        <span class="en">Nasab Mubarak</span>
+        <span class="ar">النسب المبارك</span>
+      </span>
+    </button>
+
+    <button class="tab-btn" onclick="showTab('ummahat')" aria-controls="ummahat">
+      <span class="icon">👑</span>
+      <span class="label">
+        <span class="en">Ummahat al-Mu'minin</span>
+        <span class="ar">أمهات المؤمنين</span>
+      </span>
+    </button>
+
+    <button class="tab-btn" onclick="showTab('abna')" aria-controls="abna">
+      <span class="icon">🌸</span>
+      <span class="label">
+        <span class="en">Abna' wa Banat</span>
+        <span class="ar">الأبناء والبنات</span>
+      </span>
+    </button>
+
+    <button class="tab-btn" onclick="showTab('ummi')" aria-controls="ummi">
+      <span class="icon">🌸</span>
+      <span class="label">
+        <span class="en">Ummi Ba'da Ummi</span>
+        <span class="ar">أمي بعد أمي</span>
+      </span>
+    </button>
+
+    <div class="sidebar-ornament">❧ ❧ ❧</div>
+  </nav>
+
+  <!-- Content -->
+  <main class="content">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- TAB 1 · NASAB MUBARAK                 -->
+    <!-- ══════════════════════════════════════ -->
+    <div id="nasab" class="tab-panel active" role="tabpanel">
+      <div class="panel-header">
+        <div class="panel-eyebrow">Paternal &amp; Maternal · Complete Chain</div>
+        <div class="panel-title-ar">النسب المبارك الشريف</div>
+        <div class="panel-title-en">The Sacred Lineage — Nasab Mubarak</div>
+      </div>
+
+      <p class="nasab-intro">
+        The noble lineage of the Imām of all the Prophets, Sayyidunā Rasūlullāh
+        <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>,
+        tracing through both the blessed father and the blessed mother — ascending to Sayyidunā Abul Bashar, Ādam Safiyyullāh
+        <span style="font-family:'Scheherazade New',serif">عَلَيْهِ السَّلَام</span>.
+      </p>
+
+      <div class="nasab-chain">
+
+        <!-- Root: The Prophet ﷺ -->
+        <div class="prophet-node" style="width:100%;max-width:520px;">
+          <div class="pn-title">The Seal of all Prophets &amp; Messengers</div>
+          <span class="pn-name-ar">سَيِّدُنَا حَضْرَتْ مُحَمَّد</span>
+          <span class="pn-name-en">Sayyidunā Rasūlullāh — Nūr-e-Mujassam, Habībullāh</span>
+          <span class="pn-salawat">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>
+        </div>
+
+        <!-- Split: Father / Mother -->
+        <div class="split-section" style="width:100%;max-width:520px;padding-top:0;">
+
+          <!-- Paternal -->
+          <div class="split-col paternal">
+            <div class="split-header">Paternal Line</div>
+            <div class="connector connector-gold"></div>
+
+            <div class="anc-node notable">
+              <span class="an-en">Sayyidunā Hazrat 'Abdullāh</span>
+              <span class="an-ar">سَيِّدُنَا حَضْرَتْ عَبْدُاللهِ</span>
+              <span class="an-as">عَلَيْهِ السَّلَام</span>
+              <span class="an-note">Dhabīhullāh al-Mukarram — the Blessed Father</span>
+            </div>
+            <div class="connector"></div>
+
+            <div class="anc-node">
+              <span class="an-en">Sayyidunā Hazrat 'Abdul Muttalib</span>
+              <span class="an-ar">سَيِّدُنَا حَضْرَتْ عَبْدُالْمُطَّلِب</span>
+              <span class="an-as">عَلَيْهِ السَّلَام</span>
+              <span class="an-note">Sayyid of his people</span>
+            </div>
+            <div class="connector"></div>
+
+            <div class="anc-node">
+              <span class="an-en">Sayyidunā Hazrat Hāshim</span>
+              <span class="an-ar">سَيِّدُنَا حَضْرَتْ هَاشِم</span>
+              <span class="an-as">عَلَيْهِ السَّلَام</span>
+            </div>
+            <div class="connector"></div>
+
+            <div class="anc-node">
+              <span class="an-en">Sayyidunā Hazrat 'Abde Manāf</span>
+              <span class="an-ar">سَيِّدُنَا حَضْرَتْ عَبْدِ مَنَاف</span>
+              <span class="an-as">عَلَيْهِ السَّلَام</span>
+            </div>
+            <div class="connector"></div>
+
+            <div class="anc-node">
+              <span class="an-en">Sayyidunā Hazrat Qusayy</span>
+              <span class="an-ar">سَيِّدُنَا حَضْرَتْ قُصَيّ</span>
+              <span class="an-as">عَلَيْهِ السَّلَام</span>
+            </div>
+            <div class="connector"></div>
+          </div>
+
+          <!-- Maternal -->
+          <div class="split-col maternal">
+            <div class="split-header" style="background:var(--gold);color:var(--green-deep)">Maternal Line</div>
+            <div class="connector connector-gold"></div>
+
+            <div class="anc-node notable">
+              <span class="an-en">Sayyidatunā Hazrat Āminah</span>
+              <span class="an-ar">سَيِّدَتُنَا حَضْرَتْ آمِنَة</span>
+              <span class="an-as">عَلَيْهَا السَّلَام</span>
+              <span class="an-note">Tāhirah, Tayyibah — the Blessed Mother</span>
+            </div>
+            <div class="connector"></div>
+
+            <div class="anc-node">
+              <span class="an-en">Sayyidunā Hazrat Wahab</span>
+              <span class="an-ar">سَيِّدُنَا حَضْرَتْ وَهَب</span>
+              <span class="an-as">عَلَيْهِ السَّلَام</span>
+              <span class="an-note">Father of Sayyidatunā Āminah</span>
+            </div>
+            <div class="connector"></div>
+
+            <div class="anc-node">
+              <span class="an-en">Sayyidunā Hazrat 'Abde Manāf</span>
+              <span class="an-ar">سَيِّدُنَا حَضْرَتْ عَبْدِ مَنَاف</span>
+              <span class="an-as">عَلَيْهِ السَّلَام</span>
+            </div>
+            <div class="connector"></div>
+
+            <div class="anc-node">
+              <span class="an-en">Sayyidunā Hazrat Zuhrah</span>
+              <span class="an-ar">سَيِّدُنَا حَضْرَتْ زُهْرَة</span>
+              <span class="an-as">عَلَيْهِ السَّلَام</span>
+            </div>
+            <div class="connector"></div>
+          </div>
+
+        </div><!-- end split -->
+
+        <!-- Merge at Kilāb -->
+        <div class="merge-section" style="width:100%;max-width:520px;">
+          <div class="merge-header">
+            <div class="merge-line"></div>
+            <div class="merge-label">Lines Meet Here</div>
+            <div class="merge-line"></div>
+          </div>
+          <div class="connector connector-gold"></div>
+
+          <div class="anc-node notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Kilāb</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ كِلَاب</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Both paternal &amp; maternal lines converge here</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Murrā</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مُرَّة</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Ka'b</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ كَعْب</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Lu'ayy</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ لُؤَيّ</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Ghālib</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ غَالِب</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Fihr (Quraysh)</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ فِهْر</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Mālik</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مَالِك</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Namir</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ نُمَيْر</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Kinānah</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ كِنَانَة</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Khuzaymah</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ خُزَيْمَة</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Mudrikah</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مُدْرِكَة</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Also known as 'Amr — possessor of unmatched honour in his era</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Ilyās</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ إِلْيَاس</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Sayyid of his people</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Mudar</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مُضَر</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Blessed with an exceptionally beautiful voice</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Nizār</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ نِزَار</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">First to compose a pure written work in the Arabic tongue</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Ma'add</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مَعَدّ</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Beloved of Jihād — never did he enter battle except that he emerged victorious. SubhānAllāh.</span>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Adnān node -->
+          <div class="anc-node notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat 'Adnān</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ عَدْنَان</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+
+          <!-- Scholarly note at Adnān -->
+          <div class="adnan-note">
+            <div class="note-title">📚 A Scholarly Note</div>
+            <p>
+              The chain up to Sayyidunā Hazrat 'Adnān <span style="font-family:'Scheherazade New',serif">عَلَيْهِ السَّلَام</span> is the most widely narrated, rigorously attested, and well-recorded portion of the noble lineage, accepted by the consensus of scholars. What lies beyond — tracing back to Sayyidunā Ibrāhīm <span style="font-family:'Scheherazade New',serif">عَلَيْهِ السَّلَام</span> — is known through transmission, though some links invite scholarly discussion. It is presented here with full confidence in the tradition, and ongoing research in this blessed field continues.
+            </p>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Above Adnān -->
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Add</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ أُدَد</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Maqūm</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مَقُوم</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Nāhūr</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ نَاحُور</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Tārah</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ تَارَح</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Yārib</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ يَارِب</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Yashajub</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ يَشْجُب</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Nābit</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ نَابِت</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Ismā'īl -->
+          <div class="anc-node nbprophet" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Ismā'īl Zabīhullāh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ إِسْمَاعِيل ذَبِيحُ اللهِ</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Prophet &amp; Messenger of Allāh — the one offered in sacrifice</span>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Ibrāhīm -->
+          <div class="anc-node nbprophet notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Ibrāhīm Khalīlullāh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ إِبْرَاهِيم خَلِيلُ اللهِ</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Father of the Muslim community — Jalīl al-Qadr Rasūl. Ten Suhuf were revealed upon him.</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Tārakh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ تَارَخ</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Nāhūr</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ نَاحُور</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Arghūbī</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ أَرْغُوبِي</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Sārih</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ سَارِح</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Fālih</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ فَالِح</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Matūshālakh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مَتُوشَالَخ</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Ābir</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ عَابِر</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Shālikh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ شَالِح</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Arfakhshadh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ أَرْفَخْشَذ</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Sām -->
+          <div class="anc-node nbprophet" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Sām</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ سَام</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Nūh -->
+          <div class="anc-node nbprophet notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Nūh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ نُوح</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Prophet of Allāh — the second father of mankind</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Lāmak</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ لَامَك</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Mattūshālakh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مَتُّوشَالَخ</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Idrīs -->
+          <div class="anc-node nbprophet notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Akhnūkh — Idrīs</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ أَخْنُوخ — إِدْرِيس</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Known as Idrīs — thirty Suhuf were revealed upon him. Raised to a high station.</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Yard</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ يَرْد</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Mahlā'īl</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ مَهْلَائِيل</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Quynān</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ قَيْنَان</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <div class="anc-node" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Anūsh</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ أَنُوش</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Shīth -->
+          <div class="anc-node nbprophet notable" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Hazrat Shīth</span>
+            <span class="an-ar">سَيِّدُنَا حَضْرَتْ شِيث</span>
+            <span class="an-as">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">Rasūl of Allāh — fifty Suhuf were revealed upon him</span>
+          </div>
+          <div class="connector"></div>
+
+          <!-- Ādam -->
+          <div class="anc-node prophet-ancestor" style="max-width:320px;">
+            <span class="an-en">Sayyidunā Abul Bashar — Ādam Safiyyullāh</span>
+            <span class="an-ar">سَيِّدُنَا أَبُو الْبَشَر حَضْرَتْ آدَم صَفِيُّ اللهِ</span>
+            <span class="an-as" style="color:var(--gold-light)">عَلَيْهِ السَّلَام</span>
+            <span class="an-note">The first Prophet &amp; Rasūl — Father of all humankind. Ten Suhuf were revealed upon him.</span>
+          </div>
+
+        </div><!-- end merge-section -->
+      </div><!-- end nasab-chain -->
+    </div><!-- end nasab panel -->
+
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- TAB 2 · UMMAHAT AL-MU'MININ           -->
+    <!-- ══════════════════════════════════════ -->
+    <div id="ummahat" class="tab-panel" role="tabpanel">
+      <div class="panel-header">
+        <div class="panel-eyebrow">The Blessed Wives — Mothers of All Believers</div>
+        <div class="panel-title-ar">أُمَّهَاتُ الْمُؤْمِنِين</div>
+        <div class="panel-title-en">Ummahat al-Mu'minin</div>
+      </div>
+      <p style="font-family:'Crimson Pro',Georgia,serif;color:var(--ink);margin-bottom:1.5rem;max-width:65ch;font-size:1rem;line-height:1.7;">
+        Allāh Most High said: <em>"The Prophet is closer to the believers than their own selves, and his wives are their mothers."</em> (Al-Ahzāb 33:6)
+      </p>
+
+      <div class="wives-grid">
+
+        <!-- 01 Khadijah -->
+        <div class="wife-card ummul-ummul">
+          <div class="wc-num">01 — Ummul Mu'mineen As-Sayyidatunā Al-Ūlā Al-Kubrā</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ خَدِيجَة الْكُبْرَى</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Khadījah al-Kubrā</span>
+          <span class="wc-title">Al-Tāhirah — the Pure One</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">15 years before Āmul Fīl · 14th Rabī'ul Awwal Sharif (Sunday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">15 years before Risālat · 22nd Jumādal Ūlā Sharif (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">10th year of Risālat · 17th Ramadān Sharif (Tuesday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">64 years, 6 months, 3 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">24 years, 3 months, 25 days</span></div>
+            <span class="wc-tribe">Quraish</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Ma'lā, Holy Makkah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 02 Sawdah -->
+        <div class="wife-card">
+          <div class="wc-num">02 — Ummul Mu'mineen As-Sāniyah</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ سَوْدَة بِنْت زَمْعَة</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Sawdah bint Zam'ah</span>
+          <span class="wc-title">Ummul Mu'minīn</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">4 years after Āmul Fīl · 5th Safar Sharif (Wednesday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">10th year of Risālat · 26th Ramadān Sharif (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">29th Zil Hajj Sharif, 22 Hijri (Thursday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">70 years, 10 months, 24 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">13 years, 5 months, 16 days</span></div>
+            <span class="wc-tribe">Quraish</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 03 Ayesha -->
+        <div class="wife-card ummul-ummul">
+          <div class="wc-num">03 — Ummul Mu'mineen As-Sālisah — Siddīqah, Humayrā</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ عَائِشَة الصِّدِّيقَة</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat 'Ā'ishah al-Siddīqah</span>
+          <span class="wc-title">Humayrā — Beloved of the Beloved</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">4th year of Risālat · 4th Shawwāl Sharif (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">10th year of Risālat · 1st &amp; 21st Shawwāl Sharif (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">17th Ramadān Sharif, 58 Hijri (Laylatul Ahad — Sunday Night)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">66 years, 11 months, 13 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">9 years, 4 months, 21 days</span></div>
+            <span class="wc-tribe">Quraish</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 04 Hafsah -->
+        <div class="wife-card">
+          <div class="wc-num">04 — Ummul Mu'mineen Ar-Rābi'ah — Ibnatu Abīhā</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ حَفْصَة</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Hafsah bint 'Umar</span>
+          <span class="wc-title">Keeper of the Written Qur'ān</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">5 years before Risālat · 14th Rajab al-Harām Sharif (Sunday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">4th Sha'bān Sharif, 3rd Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">13th Sha'bān Sharif, 45 Hijri (Thursday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">63 years, 29 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">7 years, 7 months, 8 days</span></div>
+            <span class="wc-tribe">Quraish</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 05 Zaynab bint Khuzaimah -->
+        <div class="wife-card">
+          <div class="wc-num">05 — Ummul Mu'mineen Al-Khāmisah — Ummul Masākīn</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ زَيْنَب بِنْت خُزَيْمَة</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Zaynab bint Khuzaymah</span>
+          <span class="wc-title">Ummul Masākīn — Mother of the Poor</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">14 years before Risālat · 20th Shawwāl Sharif (Wednesday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">26th Zil Hajj Sharif, 3rd Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">27th Rabī'ul Awwal Sharif, 4th Hijri (Saturday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">30 years, 5 months, 7 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">3 months, 1 day</span></div>
+            <span class="wc-tribe">Banū Hilāl</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 06 Umm Salamah -->
+        <div class="wife-card">
+          <div class="wc-num">06 — Ummul Mu'mineen As-Sādisah</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ أُمّ سَلَمَة بِنْت أَبِي أُمَيَّة</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Umm Salamah bint Abī Umayyah</span>
+          <span class="wc-title">The Wise Mother — lived longest among the Ummahāt</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">17 years before Risālat · 25th Muharram Sharif (Friday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">24th Shawwāl Sharif, 4th Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">5th Rabī'ul Awwal Sharif, 64 Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">93 years, 1 month, 10 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">6 years, 4 months, 18 days</span></div>
+            <span class="wc-tribe">Quraish</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 07 Zaynab bint Jahsh -->
+        <div class="wife-card">
+          <div class="wc-num">07 — Ummul Mu'mineen As-Sābi'ah — Al-A'tzalu Ibādah</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ زَيْنَب بِنْت جَحْش</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Zaynab bint Jahsh</span>
+          <span class="wc-title">Married by Allāh's Decree in the Heavens</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">20 years before Risālat · 19th Rabī'us Sāni Sharif (Friday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">8th Zilqa'd Sharif, 5th Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">23rd Jumādal Ukhrā Sharif, 20th Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">52 years, 2 months, 4 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">5 years, 4 months, 8 days</span></div>
+            <span class="wc-tribe">Banū Asad</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 08 Juwayriyah -->
+        <div class="wife-card">
+          <div class="wc-num">08 — Ummul Mu'mineen As-Sāminah</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ جُوَيْرِيَّة بِنْت الْحَارِث</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Juwayriyyah bint al-Hārith</span>
+          <span class="wc-title">Most Blessed for Her People</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">2 years before Risālat · 13th Zilqa'd Sharif (Thursday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">28th Zil Hajj Sharif, 5th Hijri (Friday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">17th Rabī'ul Awwal Sharif, 50 Hijri (Wednesday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">64 years, 4 months, 8 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">5 years, 2 months, 14 days</span></div>
+            <span class="wc-tribe">Banū Mustaliq</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 09 Raihanah -->
+        <div class="wife-card">
+          <div class="wc-num">09 — Ummul Mu'mineen At-Tāsi'ah</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ رَيْحَانَة بِنْت شَمْعُون</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Raihanah bint Sham'ūn</span>
+          <span class="wc-title">Ummul Mu'minīn</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">19 years before Risālat · 24th Rabī'ul Awwal Sharif (Wednesday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">23rd Muharramul Harām Sharif, 6th Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">5th Muharramul Harām Sharif, 11 Hijri (Thursday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">41 years, 9 months, 7 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">4 years, 11 months, 12 days</span></div>
+            <span class="wc-tribe">Banū Nadhīr</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 10 Safiyyah -->
+        <div class="wife-card">
+          <div class="wc-num">10 — Ummul Mu'mineen Al-'Āshirah</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ صَفِيَّة بِنْت حُيَيّ</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Safiyyah bint Huyayy</span>
+          <span class="wc-title">Daughter of Prophetic Lineage</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">3rd year of Risālat · 25th Ramadān Sharif (Sunday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">25th Muharramul Harām Sharif, 7th Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">23rd Ramadān Sharif, 50 Hijri (Friday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">56 years, 11 months, 28 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">4 years, 1 month, 17 days</span></div>
+            <span class="wc-tribe">Banū Nadhīr</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 11 Umm Habibah -->
+        <div class="wife-card">
+          <div class="wc-num">11 — Ummul Mu'mineen Al-Hādiyata 'Ashar</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ أُمّ حَبِيبَة بِنْت أَبِي سُفْيَان</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Umm Habībah bint Abī Sufyān</span>
+          <span class="wc-title">Steadfast in Faith in Foreign Lands</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">17 years before Risālat · 29th Jumādal Ūlā Sharif (Wednesday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">3rd Safar Sharif, 7th Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">17th Sha'bān Sharif, 44 Hijri (Thursday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">73 years, 2 months, 18 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">4 years, 1 month, 9 days</span></div>
+            <span class="wc-tribe">Quraish</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 12 Mariyah -->
+        <div class="wife-card">
+          <div class="wc-num">12 — Ummul Mu'mineen As-Sāniyah 'Ashar</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ مَارِيَة الْقِبْطِيَّة</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Māriyah al-Qibtiyyah</span>
+          <span class="wc-title">Mother of Sayyidunā Ibrāhīm</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">2 years before Risālat · 13th Rabī'ul Awwal Sharif (Friday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">24th Safar Sharif, 7th Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">16th Muharramul Harām Sharif, 16 Hijri (Thursday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">29 years, 10 months, 3 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">4 years, 18 days</span></div>
+            <span class="wc-tribe">Banū Qibt</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Jannatul Baqī', Holy Madīnah Sharif</div>
+          </div>
+        </div>
+
+        <!-- 13 Maimunah -->
+        <div class="wife-card">
+          <div class="wc-num">13 — Ummul Mu'mineen As-Sālisah 'Ashar</div>
+          <span class="wc-name-ar">سَيِّدَتُنَا حَضْرَتْ مَيْمُونَة بِنْت الْحَارِث</span>
+          <span class="wc-as">عَلَيْهَا السَّلَام</span>
+          <span class="wc-name-en">Sayyidatunā Hazrat Maymūnah bint al-Hārith</span>
+          <span class="wc-title">Last to wed our Master صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>
+          <div class="wc-summary">
+            <div class="wc-row"><span class="wc-label">Birth</span><span class="wc-val">31 years before Risālat · 3rd Rajab al-Harām Sharif (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Nikāh</span><span class="wc-val">16th Zilqa'd Sharif, 7th Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Wisāl</span><span class="wc-val">19th Zil Hajj Sharif, 51 Hijri (Monday)</span></div>
+            <div class="wc-row"><span class="wc-label">Lifespan</span><span class="wc-val">94 years, 5 months, 16 days</span></div>
+            <div class="wc-row"><span class="wc-label">Khidmat</span><span class="wc-val">3 years, 3 months, 26 days</span></div>
+            <span class="wc-tribe">Banū Hilāl</span>
+            <div class="wc-grave">🕌 Rawzah Mubārak: Sarāf (between Makkah &amp; Madīnah)</div>
+          </div>
+        </div>
+
+      </div><!-- wives-grid -->
+    </div><!-- ummahat panel -->
+
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- TAB 3 · ABNA' WA BANAT                -->
+    <!-- ══════════════════════════════════════ -->
+    <div id="abna" class="tab-panel" role="tabpanel">
+      <div class="panel-header">
+        <div class="panel-eyebrow">The Blessed Children</div>
+        <div class="panel-title-ar">الْأَبْنَاءُ وَالْبَنَات</div>
+        <div class="panel-title-en">Abnā' wa Banāt — Sons &amp; Daughters</div>
+      </div>
+      <p style="font-family:'Crimson Pro',Georgia,serif;color:var(--ink);margin-bottom:1.5rem;max-width:65ch;font-size:1rem;line-height:1.7;">
+        Every child of the Imām of all Creation, Sayyidunā Rasūlullāh <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>, is a light among lights.
+      </p>
+
+      <div style="background:var(--note-bg);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:8px;padding:0.85rem 1.1rem;margin-bottom:1.5rem;max-width:560px;">
+        <p style="font-size:0.85rem;font-family:'Crimson Pro',Georgia,serif;color:var(--ink-muted);">
+          <strong style="color:var(--green-soft);">Colour guide:</strong>
+          <span style="border-left:3px solid var(--gold);padding-left:0.4rem;margin-left:0.3rem;">Born of Sayyidatunā Khadījah</span>
+          &nbsp;·&nbsp;
+          <span style="border-left:3px solid var(--green-soft);padding-left:0.4rem;">Born of Sayyidatunā Māriyah al-Qibtiyyah</span>
+        </p>
+      </div>
+
+      <div class="children-cols">
+        <!-- Sons -->
+        <div class="children-group">
+          <h3>الْأَبْنَاء</h3>
+          <div class="group-sub">The Blessed Sons</div>
+
+          <div class="child-item from-khadijah">
+            <span style="font-family:'Scheherazade New',serif;font-size:0.72rem;color:var(--gold);display:block;letter-spacing:0.08em;margin-bottom:0.15rem;">اِبْنُ الرَّسُول النُّورُ الأَوَّل</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدُنَا حَضْرَتْ قَاسِم</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:0.78rem;color:var(--gold);margin-left:0.3rem;">عَلَيْهِ السَّلَام</span>
+            <span class="ci-en">Sayyidunā Hazrat Qāsim</span>
+            <span class="ci-note">The firstborn — An-Nūrul Awwal, the First Light. Our Master <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span> took the kunya Abul Qāsim after him. He passed in infancy — and in Paradise, he lives on in eternal light.</span>
+          </div>
+
+          <div class="child-item from-khadijah">
+            <span style="font-family:'Scheherazade New',serif;font-size:0.72rem;color:var(--gold);display:block;letter-spacing:0.08em;margin-bottom:0.15rem;">اِبْنُ الرَّسُول النُّورُ الثَّانِي</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدُنَا حَضْرَتْ طَيِّب</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:0.78rem;color:var(--gold);margin-left:0.3rem;">عَلَيْهِ السَّلَام</span>
+            <span class="ci-en">Sayyidunā Hazrat Tayyib</span>
+            <span class="ci-note">The second son — An-Nūrus Sānī, the Second Light. His blessed name means "the Good and the Pure." He was taken in infancy, a brief lamp whose light ascended to Allāh.</span>
+          </div>
+
+          <div class="child-item from-khadijah">
+            <span style="font-family:'Scheherazade New',serif;font-size:0.72rem;color:var(--gold);display:block;letter-spacing:0.08em;margin-bottom:0.15rem;">اِبْنُ الرَّسُول النُّورُ الثَّالِث</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدُنَا حَضْرَتْ طَاهِر</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:0.78rem;color:var(--gold);margin-left:0.3rem;">عَلَيْهِ السَّلَام</span>
+            <span class="ci-en">Sayyidunā Hazrat Tāhir</span>
+            <span class="ci-note">The third son — An-Nūrus Sālis, the Third Light. His blessed name means "the Immaculate." Born after prophethood, he too returned to Allāh in early infancy.</span>
+          </div>
+
+          <div class="child-item from-mariyah">
+            <span style="font-family:'Scheherazade New',serif;font-size:0.72rem;color:var(--gold);display:block;letter-spacing:0.08em;margin-bottom:0.15rem;">اِبْنُ الرَّسُول النُّورُ الرَّابِع</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدُنَا حَضْرَتْ إِبْرَاهِيم</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:0.78rem;color:var(--gold);margin-left:0.3rem;">عَلَيْهِ السَّلَام</span>
+            <span class="ci-en">Sayyidunā Hazrat Ibrāhīm</span>
+            <span class="ci-note">Born of Sayyidatunā Māriyah al-Qibtiyyah. Named after his ancestor Sayyidunā Khalīlullāh Ibrāhīm. He passed before completing two years. Our Master <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span> wept at his passing and said: "The eye weeps and the heart grieves, and we say only what pleases our Lord."</span>
+          </div>
+        </div>
+
+        <!-- Daughters -->
+        <div class="children-group">
+          <h3>الْبَنَات</h3>
+          <div class="group-sub">The Blessed Daughters</div>
+
+          <div class="child-item from-khadijah">
+            <span style="font-family:'Scheherazade New',serif;font-size:0.72rem;color:var(--gold);display:block;letter-spacing:0.08em;margin-bottom:0.15rem;">بِنْتُ الرَّسُول النُّورُ الأُولَى</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدَتُنَا حَضْرَتْ زَيْنَب</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:0.78rem;color:var(--gold);margin-left:0.3rem;">عَلَيْهَا السَّلَام</span>
+            <span class="ci-en">Sayyidatunā Hazrat Zaynab</span>
+            <span class="ci-note">The eldest daughter. She bore hardships with patience in the path of her faith. She passed away in the 8th year of Hijrah.</span>
+          </div>
+
+          <div class="child-item from-khadijah">
+            <span style="font-family:'Scheherazade New',serif;font-size:0.72rem;color:var(--gold);display:block;letter-spacing:0.08em;margin-bottom:0.15rem;">بِنْتُ الرَّسُول النُّورُ الثَّانِيَة</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدَتُنَا حَضْرَتْ رُقَيَّة</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:0.78rem;color:var(--gold);margin-left:0.3rem;">عَلَيْهَا السَّلَام</span>
+            <span class="ci-en">Sayyidatunā Hazrat Ruqayyah</span>
+            <span class="ci-note">She emigrated twice — to Abyssinia and then to Madīnah. She was the wife of Sayyidunā 'Uthmān <span style="font-family:'Scheherazade New',serif">رَضِيَ اللهُ عَنْهُ</span> and passed away at the time of the Battle of Badr.</span>
+          </div>
+
+          <div class="child-item from-khadijah">
+            <span style="font-family:'Scheherazade New',serif;font-size:0.72rem;color:var(--gold);display:block;letter-spacing:0.08em;margin-bottom:0.15rem;">بِنْتُ الرَّسُول النُّورُ الثَّالِثَة</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدَتُنَا حَضْرَتْ أُمّ كُلْثُوم</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:0.78rem;color:var(--gold);margin-left:0.3rem;">عَلَيْهَا السَّلَام</span>
+            <span class="ci-en">Sayyidatunā Hazrat Umm Kulthūm</span>
+            <span class="ci-note">After the passing of Sayyidatunā Ruqayyah, she too was wed to Sayyidunā 'Uthmān, earning him the title Dhul-Nūrayn — the possessor of two lights.</span>
+          </div>
+
+          <div class="child-item from-khadijah">
+            <span style="font-family:'Scheherazade New',serif;font-size:0.72rem;color:var(--gold);display:block;letter-spacing:0.08em;margin-bottom:0.15rem;">بِنْتُ الرَّسُول النُّورُ الرَّابِعَة</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدَتُنَا حَضْرَتْ فَاطِمَة الزَّهْرَاء</span>
+            <span style="font-family:'Scheherazade New',serif;font-size:0.78rem;color:var(--gold);margin-left:0.3rem;">عَلَيْهَا السَّلَام</span>
+            <span class="ci-en">Sayyidatunā Hazrat Fātimah al-Zahrā'</span>
+            <span class="ci-note">The Beloved of the Beloved. The youngest daughter and the most beloved. Our Master <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span> said: "Fātimah is a part of me — whoever harms her harms me." She is the Sayyidah of the women of the worlds. Wife of Sayyidunā 'Alī and mother of al-Hasan and al-Husayn <span style="font-family:'Scheherazade New',serif">عَلَيْهِمَا السَّلَام</span>.</span>
+          </div>
+
+        </div>
+      </div><!-- children-cols -->
+    </div><!-- abna panel -->
+
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- TAB 4 · UMMI BA'DA UMMI               -->
+    <!-- ══════════════════════════════════════ -->
+    <div id="ummi" class="tab-panel" role="tabpanel">
+      <div class="panel-header">
+        <div class="panel-eyebrow">Foster &amp; Milk Mothers · Milk Siblings</div>
+        <div class="panel-title-ar">أُمِّي بَعْدَ أُمِّي</div>
+        <div class="panel-title-en">Ummi Ba'da Ummi — My Mother After My Mother</div>
+      </div>
+      <p style="font-family:'Crimson Pro',Georgia,serif;color:var(--ink);margin-bottom:1.75rem;max-width:65ch;font-size:1rem;line-height:1.7;">
+        Among the blessed customs of the noble Arabs was the entrusting of newborns to foster mothers of the desert — for fresh air, pure speech, and strong character. Our Master, the Crown of all Creation, Sayyidunā Rasūlullāh <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>, was honoured with such mothers of the heart.
+      </p>
+
+      <!-- Thuwaybah -->
+      <div class="milk-card">
+        <div style="display:flex;align-items:baseline;flex-wrap:wrap;gap:0.4rem;">
+          <h4>سَيِّدَتُنَا حَضْرَتْ ثُوَيْبَة</h4>
+          <span class="mc-as">عَلَيْهَا السَّلَام</span>
+        </div>
+        <span class="mc-en">Sayyidatunā Hazrat Thuwaybah al-Aslamiyyah</span>
+        <span class="mc-role">First Foster Mother · Freed Servant of Sayyidunā Abū Lahab</span>
+        <p class="mc-body">She was the first to nurse our Master, the Light of the Worlds, Sayyidunā Rasūlullāh <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>, even before he was entrusted to Sayyidatunā Halīmah. She also nursed Sayyidunā Hamzah <span style="font-family:'Scheherazade New',serif">رَضِيَ اللهُ عَنْهُ</span>, making him a milk-brother. It is narrated that Abū Lahab, who announced her freedom out of joy at the birth of our Master <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>, received a lightening of punishment on that day each week — such is the blessing of joy at his birth.</p>
+      </div>
+
+      <!-- Halīmah -->
+      <div class="milk-card" style="border-color:var(--gold);border-width:1.5px;">
+        <div style="display:flex;align-items:baseline;flex-wrap:wrap;gap:0.4rem;">
+          <h4>سَيِّدَتُنَا حَضْرَتْ حَلِيمَة السَّعْدِيَّة</h4>
+          <span class="mc-as">عَلَيْهَا السَّلَام</span>
+        </div>
+        <span class="mc-en">Sayyidatunā Hazrat Halīmah al-Sa'diyyah</span>
+        <span class="mc-role">The Most Honoured Foster Mother · Tribe of Banū Sa'd</span>
+        <p class="mc-body">The most honoured and most celebrated of the foster mothers. She came from the tribe of Banū Sa'd ibn Bakr, known for the purity of their Arabic tongue. When she took the blessed infant — our Master, the Best of Mankind, Sayyidunā Rasūlullāh <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span> — into her care, the barren land turned green, the dried-up she-camel gave milk, and blessings poured upon her household from every direction. Our Master <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span> remained with her in the desert for four years, then was returned to his blessed mother Sayyidatunā Āminah. In later years, she visited him in Makkah and he received her with great honour, spreading his blessed cloak for her to sit upon.</p>
+      </div>
+
+      <!-- Milk Siblings -->
+      <div class="milk-siblings">
+        <h3 style="margin-bottom:0.25rem;">الْإِخْوَة وَالأَخَوَات مِنَ الرَّضَاعَة</h3>
+        <p style="font-family:'Crimson Pro',Georgia,serif;font-style:italic;color:var(--ink-muted);font-size:0.9rem;margin-bottom:1rem;">Milk Brothers &amp; Sisters</p>
+
+        <div class="sibling-grid">
+          <div class="sib-item">
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدُنَا حَضْرَتْ حَمْزَة</span>
+            <span class="si-en">Sayyidunā Hazrat Hamzah ibn 'Abd al-Muttalib</span>
+            <span class="si-note">Milk-brother through Sayyidatunā Thuwaybah — also paternal uncle. Asadullāh — the Lion of Allāh, the Master of Martyrs.</span>
+          </div>
+
+          <div class="sib-item">
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدُنَا حَضْرَتْ أَبُو سَلَمَة</span>
+            <span class="si-en">Sayyidunā Hazrat Abū Salamah 'Abdullāh ibn 'Abd al-Asad</span>
+            <span class="si-note">Milk-brother through Sayyidatunā Thuwaybah. Among the earliest Muslims.</span>
+          </div>
+
+          <div class="sib-item">
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدَتُنَا حَضْرَتْ عَبْدُاللهِ بْن حَارِث</span>
+            <span class="si-en">Sayyidunā Hazrat 'Abdullāh ibn Hārith (Abu Sufrah)</span>
+            <span class="si-note">Milk-brother through Sayyidatunā Halīmah al-Sa'diyyah.</span>
+          </div>
+
+          <div class="sib-item">
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدَتُنَا حَضْرَتْ أُنَيْسَة</span>
+            <span class="si-en">Sayyidatunā Hazrat Unaysah bint Hārith</span>
+            <span class="si-note">Milk-sister through Sayyidatunā Halīmah — daughter of the blessed foster mother.</span>
+          </div>
+
+          <div class="sib-item">
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدَتُنَا حَضْرَتْ حُذَافَة / شَيْمَاء</span>
+            <span class="si-en">Sayyidatunā Hazrat Hudāfah (Shaymā') bint Hārith</span>
+            <span class="si-note">Milk-sister through Sayyidatunā Halīmah. She was once brought as a captive and our Master <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span> recognised her, stood to honour her, and spread his cloak for her.</span>
+          </div>
+
+          <div class="sib-item">
+            <span style="font-family:'Scheherazade New',serif;font-size:1rem;color:var(--green-soft);">سَيِّدُنَا حَضْرَتْ أَبُو خَيْثَمَة</span>
+            <span class="si-en">Sayyidunā Hazrat Abū Khaythamah ibn Hārith</span>
+            <span class="si-note">Milk-brother through Sayyidatunā Halīmah — son of the blessed foster mother.</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- ummi panel -->
+
+  </main>
+</div><!-- shell -->
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  var panel = document.getElementById(id);
+  if (panel) panel.classList.add('active');
+  event.currentTarget.classList.add('active');
+  try { localStorage.setItem('ahl-tab', id); } catch(e) {}
+}
+try {
+  var saved = localStorage.getItem('ahl-tab');
+  if (saved && document.getElementById(saved)) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(saved).classList.add('active');
+    document.querySelector('[onclick="showTab(\'' + saved + '\')"]')?.classList.add('active');
+  }
+} catch(e) {}
+</script>
+
+</body></html>
