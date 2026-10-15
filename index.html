@@ -1,124 +1,1083 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Blessed Arrival of the Prophet ﷺ - Mawlid History</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      margin: 0 auto;
-      max-width: 700px;
-      padding: 1.5rem;
-      background: #f5fff5;
-      color: #2c3e2f;
-      line-height: 1.7;
-    }
-    h1, h2 {
-      color: #1e4620;
-      border-bottom: 2px solid #81c784;
-      padding-bottom: 0.3rem;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    .source {
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 2rem;
-      border-top: 1px dashed #ccc;
-      padding-top: 1rem;
-    }
-    .highlight {
-      background: #e6f9e6;
-      padding: 0.5rem;
-      border-left: 4px solid #4caf50;
-      margin: 1rem 0;
-      font-style: italic;
-    }
-    nav {
-  background: #d4edda;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>The Blessed Arrival</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap">
+
+<style>
+/* ── DESIGN TOKENS ──────────────────────────────────────────────────────── */
+/* Layout: full-bleed cinematic sections that shift sky-tone as you scroll  */
+:root {
+  /* greens */
+  --g-deep:   #071c0f;
+  --g-dark:   #0d3220;
+  --g-mid:    #1a5c3f;
+  --g-soft:   #2e7d52;
+  --g-pale:   #c8e6d4;
+  --g-wash:   #eef7f1;
+  /* golds */
+  --gold:     #c9a030;
+  --gold-lt:  #e8d07a;
+  --gold-dim: rgba(201,160,48,0.35);
+  /* text */
+  --ink:      #1a1a16;
+  --ink-2:    #3d4a3f;
+  --ink-3:    #6b7a6e;
+  --cream:    #faf8f0;
+  /* section sky tones */
+  --sky-eve:  #0f1e10;   /* evening — deep forest-green night */
+  --sky-mid:  #080c10;   /* midnight — near-black blue-black */
+  --sky-dawn: #0d1810;   /* pre-dawn — deepest dark before light */
+  /* ui */
+  --border:   rgba(30,90,60,0.14);
+  --shadow:   0 4px 32px rgba(0,0,0,0.18);
+  --radius:   10px;
 }
 
-nav a {
-  color: #1e4620;
+/* dark-mode tokens — the hero/sections are intentionally dark regardless,
+   but the prose between and footer respond to theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream:  #0d1a12;
+    --ink:    #e4ede7;
+    --ink-2:  #9ab8a4;
+    --ink-3:  #6b8a74;
+    --g-wash: #091408;
+    --border: rgba(50,140,90,0.15);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --cream:  #0d1a12;
+  --ink:    #e4ede7;
+  --ink-2:  #9ab8a4;
+  --ink-3:  #6b8a74;
+  --g-wash: #091408;
+  --border: rgba(50,140,90,0.15);
+  color-scheme: dark;
+}
+
+/* ── RESET & BASE ───────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  overflow-x: hidden;
+  padding-left: max(0px, env(safe-area-inset-left, 0px));
+  padding-right: max(0px, env(safe-area-inset-right, 0px));
+}
+
+/* ── NAVBAR ─────────────────────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem max(20px, env(safe-area-inset-left, 0px));
+  background: rgba(7,28,15,0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201,160,48,0.18);
+  transition: background 0.3s;
+}
+.nav-brand {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.25rem;
+  color: var(--gold-lt);
+  letter-spacing: 0.04em;
   text-decoration: none;
-  margin: 0 0.3rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(200,230,212,0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold-lt); }
+/* mobile nav */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gold-lt);
+  font-size: 1.3rem;
+  padding: 0.2rem;
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; flex-direction: column; gap: 0.75rem; position: absolute;
+    top: 100%; left: 0; right: 0; background: rgba(7,28,15,0.97);
+    padding: 1rem max(20px, env(safe-area-inset-left, 0px));
+    border-bottom: 1px solid rgba(201,160,48,0.18); }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
 }
 
-nav a:hover {
-  color: #2e7d32;
-  font-weight: bold;
-  underline: #81c784;
+/* ── HERO ────────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: #0e2a18;
+  padding-block: max(120px, 15vh);
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
 }
-  </style>
-</head>
-<body>
-<nav>
-  <a href="/">Home</a>
-  •
-  <a href="/about.html">About</a>
-  •
-  <a href="/importance.html">Importance</a>
-  •
-  <a href="/proof.html">Proof from Quran</a>
-  •
-  <a href="/history.html">History</a>
-  •
-  <a href="/contact.html">Contact</a>
+
+/* SVG star-pattern background */
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+/* radial gold glow behind title */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -52%);
+  width: min(700px, 130vw);
+  height: min(700px, 130vw);
+  background: radial-gradient(ellipse, rgba(201,160,48,0.13) 0%, transparent 68%);
+  pointer-events: none;
+}
+
+/* curtain drape lines */
+.hero-curtain {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.06;
+}
+
+.hero-inner { position: relative; z-index: 2; max-width: 780px; }
+
+.hero-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 60px rgba(201,160,48,0.3);
+  margin-bottom: 0.15em;
+}
+
+.hero-title-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 2.5rem;
+}
+
+/* Quranic verse block */
+.hero-verse {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,160,48,0.2);
+  border-radius: 12px;
+  padding: 1.2rem 2rem;
+  margin-bottom: 1.8rem;
+  max-width: 640px;
+  margin-inline: auto;
+}
+.verse-ref {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+.verse-en {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(1rem, 2.2vw, 1.18rem);
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+  font-style: italic;
+}
+
+/* page links row between title-en and scroll */
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.8rem;
+}
+.hero-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(200,230,212,0.55);
+  text-decoration: none;
+  border: 1px solid rgba(201,160,48,0.18);
+  border-radius: 20px;
+  padding: 0.3rem 0.85rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+.hero-link:hover { color: var(--gold-lt); border-color: rgba(201,160,48,0.5); }
+
+/* scroll invitation */
+.hero-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+.hero-scroll-label {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.08rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+}
+.scroll-arrow {
+  width: 28px; height: 28px;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(45deg);
+  animation: arrowBounce 1.6s ease-in-out infinite;
+  opacity: 0.7;
+}
+@keyframes arrowBounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.7; }
+  50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
+}
+
+/* gradient fade into first section */
+.hero-fade {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--sky-eve));
+  pointer-events: none;
+}
+
+/* ── NARRATIVE SECTIONS ─────────────────────────────────────────────────── */
+.section {
+  position: relative;
+  overflow: hidden;
+  padding-block: 5rem;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+
+/* section inner layout: text left, illustration right */
+.section-inner {
+  max-width: 1100px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 780px) {
+  .section-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .section-illus { order: -1; }
+}
+
+.section-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.section-heading {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  text-wrap: balance;
+  margin-bottom: 1.5rem;
+}
+.section-body {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(1rem, 2vw, 1.13rem);
+  line-height: 1.85;
+  max-width: 58ch;
+}
+.section-body p { margin-bottom: 1.2em; }
+.section-body p:last-child { margin-bottom: 0; }
+
+/* noble names in text */
+.noble {
+  font-family: 'Scheherazade New', serif;
+  font-size: 0.92em;
+  vertical-align: middle;
+}
+
+/* list of heavenly visitors */
+.visitor-list {
+  list-style: none;
+  margin: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.visitor-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.5;
+}
+.visitor-list li::before {
+  content: '✦';
+  font-size: 0.6rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+.visitor-note {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  margin-top: 0.8rem;
+  opacity: 0.8;
+  padding-left: 1.2rem;
+  border-left: 2px solid currentColor;
+  line-height: 1.6;
+}
+
+/* ── SECTION 1 — EVENING ────────────────────────────────────────────────── */
+.s-evening {
+  background: var(--sky-eve);
+  color: rgba(220,240,228,0.88);
+}
+.s-evening .section-eyebrow { color: rgba(201,160,48,0.8); }
+.s-evening .section-heading { color: #d8eed0; }
+.s-evening .visitor-list li::before { color: var(--gold); }
+.s-evening .visitor-note { border-color: rgba(201,160,48,0.4); color: rgba(220,240,228,0.65); }
+
+/* gradient from hero into evening */
+.s-evening::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 80% 50%, rgba(30,90,50,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(201,160,48,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ── SECTION 2 — MIDNIGHT ───────────────────────────────────────────────── */
+.s-midnight {
+  background: var(--sky-mid);
+  color: rgba(180,210,195,0.85);
+}
+.s-midnight .section-eyebrow { color: rgba(160,195,220,0.7); }
+.s-midnight .section-heading { color: rgba(200,230,215,0.95); }
+.s-midnight .visitor-list li::before { color: rgba(160,195,220,0.8); }
+.s-midnight .visitor-note { border-color: rgba(160,195,220,0.3); color: rgba(180,210,195,0.6); }
+.s-midnight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 70% at 75% 40%, rgba(20,40,80,0.5) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ── SECTION 3 — DAWN ───────────────────────────────────────────────────── */
+.s-dawn {
+  background: linear-gradient(170deg, var(--sky-dawn) 0%, #0f1e0a 40%, #1a2e10 100%);
+  color: rgba(220,240,215,0.9);
+}
+.s-dawn .section-eyebrow { color: var(--gold); }
+.s-dawn .section-heading { color: #e8f0e0; }
+.s-dawn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 75% 70%, rgba(201,160,48,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* section fades between sky tones */
+.sky-fade-mid {
+  height: 80px;
+  background: linear-gradient(to bottom, var(--sky-eve), var(--sky-mid));
+}
+.sky-fade-dawn {
+  height: 80px;
+  background: linear-gradient(to bottom, var(--sky-mid), var(--sky-dawn));
+}
+
+/* ── ILLUSTRATIONS (pure SVG) ───────────────────────────────────────────── */
+.section-illus {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-illus svg {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+/* ── BALAGHAL ULA ────────────────────────────────────────────────────────── */
+.balaghal {
+  background: var(--g-deep);
+  text-align: center;
+  padding-block: 5rem;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+  position: relative;
+  overflow: hidden;
+}
+.balaghal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(201,160,48,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.balaghal-inner { position: relative; z-index: 2; max-width: 720px; margin-inline: auto; }
+.balaghal-ar {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  color: rgba(232,208,122,0.85);
+  line-height: 2.2;
+  direction: rtl;
+  margin-bottom: 0.5rem;
+}
+.balaghal-attr {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(200,230,212,0.45);
+  margin-bottom: 2.5rem;
+}
+.salawat-big {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  color: var(--gold-lt);
+  text-shadow: 0 0 40px rgba(232,208,122,0.35), 0 0 80px rgba(201,160,48,0.15);
+  display: block;
+  line-height: 1.4;
+}
+
+/* ── SOURCES ─────────────────────────────────────────────────────────────── */
+.sources {
+  background: var(--g-wash);
+  padding-block: 3rem;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+  border-top: 1px solid var(--border);
+}
+.sources-inner { max-width: 720px; margin-inline: auto; }
+.sources-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--g-soft);
+  margin-bottom: 1rem;
+}
+.sources-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.sources-list li {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  font-style: italic;
+  line-height: 1.5;
+}
+.sources-list li span {
+  font-style: normal;
+  color: var(--ink-3);
+  font-size: 0.82rem;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────────────────── */
+footer {
+  background: var(--g-deep);
+  color: rgba(200,230,212,0.5);
+  text-align: center;
+  padding-block: 2.5rem;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+.footer-salawat {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.3rem;
+  color: rgba(232,208,122,0.4);
+  display: block;
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+}
+.footer-motto {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: rgba(200,230,212,0.4);
+  margin-bottom: 0.6rem;
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.2rem;
+  list-style: none;
+  margin-top: 1.2rem;
+}
+.footer-nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(200,230,212,0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--gold); }
+.footer-copy {
+  font-size: 0.7rem;
+  margin-top: 1.5rem;
+  color: rgba(200,230,212,0.2);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── REDUCED MOTION ──────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-arrow { animation: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- NAVBAR                                                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Site navigation">
+  <a href="/" class="nav-brand">مَوْلِد</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/importance.html">Importance</a></li>
+    <li><a href="/proof.html">Quran &amp; Sunnah</a></li>
+    <li><a href="/history.html">History</a></li>
+    <li><a href="/ahl-e-bayt/">Ahl-e-Bayt</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
 </nav>
 
-  <h1>The Blessed Arrival of the Prophet ﷺ</h1>
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- HERO                                                                     -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
 
-  <p>
-    According to the most well-known and widely renowned traditions, when six months had passed while the Leader of the Messengers, the Seal of the Prophets, the Embodiment of Divine Light, and the Beloved of Allah—our Holy Prophet (peace and blessings be upon Him)—was in the sacred womb of His honored mother (peace be upon her), His noble father, Hazrat Zabihullah [Hazrat Abdullah, peace be upon him], passed away in the illuminated city of Madinah. He had been staying with his maternal uncles from the Banu Adi clan of the Najjariya tribe for a month seeking recovery from an illness, and it was during this time that he left this temporal world.
-  </p>
+  <!-- Islamic star pattern background -->
+  <svg class="hero-pattern" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"
+       xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <pattern id="star8" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+        <!-- 8-pointed star tile -->
+        <g fill="none" stroke="#c9a030" stroke-width="0.7">
+          <polygon points="40,8 47,28 68,28 52,42 58,62 40,50 22,62 28,42 12,28 33,28"/>
+          <polygon points="40,15 44,27 57,27 47,35 51,47 40,40 29,47 33,35 23,27 36,27"
+                   opacity="0.4"/>
+          <line x1="40" y1="0" x2="40" y2="80" opacity="0.15"/>
+          <line x1="0" y1="40" x2="80" y2="40" opacity="0.15"/>
+          <line x1="0" y1="0" x2="80" y2="80" opacity="0.1"/>
+          <line x1="80" y1="0" x2="0" y2="80" opacity="0.1"/>
+        </g>
+      </pattern>
+    </defs>
+    <rect width="400" height="400" fill="url(#star8)"/>
+  </svg>
 
-  <div class="highlight">
-    <strong>SubhanAllah!</strong> How close Was the timing?<br/>
-    Some reports say <em>six months</em>, others <em>nine months</em>. We’ll explore both views shortly.
+  <!-- curtain drape SVG -->
+  <svg class="hero-curtain" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+       xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="curtainGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#c9a030" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#c9a030" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <!-- vertical drape lines suggesting curtain folds -->
+    <g stroke="url(#curtainGrad)" stroke-width="1.2" fill="none">
+      <path d="M60,0 Q80,200 60,400 Q40,600 60,800"/>
+      <path d="M140,0 Q120,200 140,400 Q160,600 140,800"/>
+      <path d="M220,0 Q240,200 220,400 Q200,600 220,800"/>
+      <path d="M300,0 Q280,200 300,400 Q320,600 300,800"/>
+      <path d="M900,0 Q880,200 900,400 Q920,600 900,800"/>
+      <path d="M980,0 Q1000,200 980,400 Q960,600 980,800"/>
+      <path d="M1060,0 Q1040,200 1060,400 Q1080,600 1060,800"/>
+      <path d="M1140,0 Q1160,200 1140,400 Q1120,600 1140,800"/>
+    </g>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Celebrating &amp; showing gratitude for having him</div>
+
+    <!-- Quranic verse — Surah Yunus 58 -->
+    <div class="hero-verse">
+      <div class="verse-ref">Sūrah Yūnus · Āyah 58</div>
+      <div class="verse-en">
+        "Say: it is by the Grace and Mercy of Allāh Pāk that you have received His Beloved
+        <span class="noble">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span> —
+        therefore it is their duty to rejoice. This rejoicing
+        is superior and better than all other deeds."
+      </div>
+    </div>
+
+    <h1 class="hero-title">مَوْلِد</h1>
+    <div class="hero-title-en">Mawlid — The Blessed Arrival</div>
+
+    <!-- page shortcuts -->
+    <div class="hero-links">
+      <a href="/ahl-e-bayt/" class="hero-link">✦ Ahl-e-Bayt &amp; Sacred Family</a>
+    </div>
+
+    <div class="hero-scroll">
+      <span class="hero-scroll-label">The Blessed Arrival — read on</span>
+      <div class="scroll-arrow" aria-hidden="true"></div>
+    </div>
   </div>
 
-  <p>
-    According to the most preferred and authenticated accounts, when the Holy Prophet ﷺ completed approximately nine lunar months within the blessed care of His revered mother (peace be upon her), the moment drew near for Him to arrive in this world, bringing with Him an endless fountain of joy.
-  </p>
+  <div class="hero-fade" aria-hidden="true"></div>
+</section>
 
-  <h2>The Night of Arrival</h2>
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- PART 1 — EVENING · Early Kaaba                                          -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="section s-evening" id="part1">
+  <div class="section-inner">
 
-  <p>
-    On the blessed night of His arrival, heavenly noble women descended from Paradise to the presence of His honored mother (peace be upon her) to welcome Him:
-  </p>
+    <div class="section-text">
+      <h2 class="section-heading">The World Prepared<br>for the Sacred Arrival</h2>
+      <div class="section-body">
+        <p>
+          When six months had passed with the Leader of the Messengers,
+          Sayyidunā Rasūlullāh <span class="noble">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span> —
+          resting in the sacred keeping of His honoured mother
+          <span class="noble">عَلَيْهَا السَّلَام</span> —
+          His noble father Sayyidunā ʿAbdullāh
+          <span class="noble">عَلَيْهِ السَّلَام</span> passed from this world
+          in the illuminated city of Madīnah.
+          He had been staying with his maternal uncles,
+          seeking recovery from an illness —
+          and it was there that he returned to his Lord.
+        </p>
+        <p>
+          When the nine lunar months drew to their close within
+          the blessed care of His revered mother
+          <span class="noble">عَلَيْهَا السَّلَام</span>,
+          the moment drew near for Him to make His advent upon this world —
+          bringing with Him an endless fountain of mercy and joy.
+        </p>
+      </div>
+    </div>
 
-  <ul>
-    <li><strong>Hazrat Hawwa (Eve)</strong> — the revered mother of all humanity;</li>
-    <li>The mother and step-mother of Hazrat Zabihullah (peace be upon them) — father of the Prophet ﷺ;</li>
-    <li><strong>Hazrat Asiya</strong> — the noble guardian and caregiver of Prophet Musa (Moses, peace be upon him);</li>
-    <li><strong>Hazrat Maryam (Mary)</strong> — the blessed and chosen mother of Prophet 'Isa (Jesus, peace be upon him);</li>
-    <li>The Maidens (Hoor) of Paradise — who all arrived in joy and reverence to greet the beloved of Almighty Allah.</li>
-  </ul>
+    <!-- Evening illustration: early Kaaba under a star-filled sky -->
+    <div class="section-illus" aria-hidden="true">
+      <svg viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="skyEve" cx="50%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#1a3520"/>
+            <stop offset="100%" stop-color="#071c0f"/>
+          </radialGradient>
+          <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#e8d07a" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#e8d07a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- sky -->
+        <rect width="360" height="420" fill="url(#skyEve)"/>
+        <!-- moon glow -->
+        <circle cx="270" cy="70" r="55" fill="url(#moonGlow)"/>
+        <!-- crescent moon -->
+        <circle cx="270" cy="70" r="22" fill="#e8d07a" opacity="0.9"/>
+        <circle cx="282" cy="64" r="17" fill="#0d2a14"/>
+        <!-- stars -->
+        <g fill="#e8d07a" opacity="0.7">
+          <circle cx="40"  cy="30"  r="1.2"/>
+          <circle cx="90"  cy="18"  r="0.9"/>
+          <circle cx="140" cy="45"  r="1.0"/>
+          <circle cx="60"  cy="80"  r="0.8"/>
+          <circle cx="200" cy="25"  r="1.1"/>
+          <circle cx="230" cy="55"  r="0.8"/>
+          <circle cx="160" cy="15"  r="0.7"/>
+          <circle cx="310" cy="35"  r="1.0"/>
+          <circle cx="330" cy="100" r="0.7"/>
+          <circle cx="20"  cy="120" r="0.9"/>
+          <circle cx="110" cy="100" r="0.7"/>
+          <circle cx="180" cy="88"  r="0.8"/>
+        </g>
+        <!-- distant hills -->
+        <ellipse cx="80"  cy="310" rx="130" ry="40" fill="#051608" opacity="0.8"/>
+        <ellipse cx="300" cy="320" rx="110" ry="35" fill="#071a0c" opacity="0.7"/>
+        <!-- ground -->
+        <rect x="0" y="320" width="360" height="100" fill="#040f07"/>
+        <!-- early Kaaba — simple cube, no decoration (pre-renovation style) -->
+        <!-- body -->
+        <rect x="110" y="200" width="140" height="130" fill="#0a1e10" stroke="#1a5c3f" stroke-width="1"/>
+        <!-- roof edge -->
+        <rect x="108" y="196" width="144" height="8" fill="#0d2a18" stroke="#2e7d52" stroke-width="0.7"/>
+        <!-- side face lighter -->
+        <polygon points="250,200 295,220 295,330 250,330" fill="#0d2218" opacity="0.7"/>
+        <!-- door (arched) -->
+        <rect x="163" y="265" width="34" height="65" fill="#1a5c3f" opacity="0.4"/>
+        <ellipse cx="180" cy="265" rx="17" ry="8" fill="#1a5c3f" opacity="0.4"/>
+        <!-- door frame -->
+        <rect x="161" y="263" width="38" height="68" fill="none" stroke="#c9a030" stroke-width="1.2" opacity="0.6"/>
+        <ellipse cx="180" cy="263" rx="19" ry="9" fill="none" stroke="#c9a030" stroke-width="1.2" opacity="0.6"/>
+        <!-- corner pillars subtle -->
+        <rect x="110" y="200" width="6"  height="130" fill="#1a5c3f" opacity="0.3"/>
+        <rect x="244" y="200" width="6"  height="130" fill="#1a5c3f" opacity="0.3"/>
+        <!-- ambient ground light around Kaaba -->
+        <ellipse cx="180" cy="330" rx="80" ry="12" fill="#1a5c3f" opacity="0.15"/>
+        <!-- small gold crescent atop -->
+        <circle cx="180" cy="193" r="5" fill="#c9a030" opacity="0.8"/>
+        <circle cx="183" cy="190" r="3.5" fill="#0a1e10"/>
+      </svg>
+    </div>
 
-  <p class="highlight">
-    <strong>SubhanAllah!</strong> The heavens opened. Angels, righteous mothers, and divine light surrounded the newborn Prophet ﷺ.
-  </p>
-
-  <p>
-    When the sacred moment finally arrived, the Beloved of Allah, the Embodiment of Divine Light, our Holy Prophet ﷺ, made His blessed advent upon the earth, radiant as a brilliant and illuminating Light.
-  </p>
-
-  <p><strong>SubhanAllah!</strong></p>
-
-  <div class="source">
-    <strong>Sources:</strong><br/>
-    <em>Al-Bidayah wan-Nihayah</em> – Ibn Kathir<br/>
-    <em>Al-Mawahib al-Ladunniyyah</em> – Imam al-Qastalani<br/>
-    <em>Sharh al-Mawahib</em> – Imam Muhammad al-Zurqani<br/>
-    <em>Al-Iqd al-Jawahir (Mawlid al-Barzanji)</em> – Imam al-Barzanji<br/>
-    <em>Subul al-Huda wa al-Rashad</em> – Muhammad ibn Yusuf al-Salihi al-Shami<br/>
   </div>
+</section>
 
-</body>
-</html>
+<div class="sky-fade-mid" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- PART 2 — MIDNIGHT · Makkah city in silence                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="section s-midnight" id="part2">
+  <div class="section-inner">
+
+    <div class="section-text">
+      <h2 class="section-heading">Heavenly Visitors Descend</h2>
+      <div class="section-body">
+        <p>
+          On the blessed night of His arrival, noble women from the highest
+          stations descended from Paradise to the presence of His honoured mother
+          <span class="noble">عَلَيْهَا السَّلَام</span> to welcome Him:
+        </p>
+        <ul class="visitor-list">
+          <li>Sayyidatunā Ḥawwā <span class="noble">عَلَيْهَا السَّلَام</span> — revered mother of all humanity</li>
+          <li>The mother and stepmother of Sayyidunā Ismāʿīl <span class="noble">عَلَيْهِ السَّلَام</span></li>
+          <li>Sayyidatunā Āsiyah <span class="noble">عَلَيْهَا السَّلَام</span> — the noble caregiver of Sayyidunā Mūsā <span class="noble">عَلَيْهِ السَّلَام</span></li>
+          <li>Sayyidatunā Maryam <span class="noble">عَلَيْهَا السَّلَام</span> — the blessed mother of Sayyidunā ʿĪsā <span class="noble">عَلَيْهِ السَّلَام</span></li>
+          <li>The Ḥūr al-ʿĪn — the blessed maidens of Paradise</li>
+        </ul>
+        <p class="visitor-note">
+          They came from <em>Ḥaẓīratul Qudsiyyah</em>
+          <span class="noble" style="font-size:0.95em;"> حَظِيرَةُ الْقُدْس</span> —
+          the Sacred Enclosure — to honour the advent of the Beloved of Allāh.
+        </p>
+      </div>
+    </div>
+
+    <!-- Midnight illustration: Makkah city silhouette under deep night sky -->
+    <div class="section-illus" aria-hidden="true">
+      <svg viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="skyMid" cx="50%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#0a1020"/>
+            <stop offset="100%" stop-color="#050810"/>
+          </radialGradient>
+          <radialGradient id="starfield" cx="50%" cy="20%" r="60%">
+            <stop offset="0%" stop-color="#8ab4d4" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="#8ab4d4" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- sky -->
+        <rect width="360" height="420" fill="url(#skyMid)"/>
+        <rect width="360" height="420" fill="url(#starfield)"/>
+        <!-- stars — more plentiful at midnight -->
+        <g fill="#c8dde8" opacity="0.65">
+          <circle cx="18"  cy="22"  r="1.0"/>
+          <circle cx="55"  cy="12"  r="0.8"/>
+          <circle cx="95"  cy="35"  r="1.1"/>
+          <circle cx="140" cy="8"   r="0.7"/>
+          <circle cx="175" cy="28"  r="0.9"/>
+          <circle cx="215" cy="15"  r="1.0"/>
+          <circle cx="255" cy="40"  r="0.8"/>
+          <circle cx="290" cy="10"  r="1.2"/>
+          <circle cx="330" cy="28"  r="0.7"/>
+          <circle cx="345" cy="55"  r="0.9"/>
+          <circle cx="30"  cy="65"  r="0.8"/>
+          <circle cx="70"  cy="50"  r="0.7"/>
+          <circle cx="110" cy="72"  r="0.9"/>
+          <circle cx="160" cy="58"  r="0.8"/>
+          <circle cx="200" cy="75"  r="0.7"/>
+          <circle cx="240" cy="60"  r="1.0"/>
+          <circle cx="310" cy="72"  r="0.8"/>
+        </g>
+        <!-- Milky way hint -->
+        <ellipse cx="180" cy="60" rx="160" ry="20" fill="#8ab4d4" opacity="0.04"/>
+        <!-- city silhouette — rows of old Makkan buildings with arched windows -->
+        <!-- back row (lighter) -->
+        <g fill="#080c18" opacity="0.9">
+          <rect x="0"   y="240" width="40" height="90"/>
+          <rect x="38"  y="225" width="30" height="105"/>
+          <rect x="66"  y="245" width="35" height="85"/>
+          <rect x="99"  y="230" width="28" height="100"/>
+          <rect x="190" y="228" width="32" height="102"/>
+          <rect x="220" y="238" width="28" height="92"/>
+          <rect x="246" y="222" width="36" height="108"/>
+          <rect x="280" y="232" width="30" height="98"/>
+          <rect x="308" y="242" width="52" height="88"/>
+        </g>
+        <!-- minarets -->
+        <g fill="#080c18">
+          <!-- minaret left -->
+          <rect x="127" y="155" width="12" height="120"/>
+          <polygon points="127,155 133,135 139,155"/>
+          <circle cx="133" cy="155" r="5" fill="#0a1020"/>
+          <rect x="124" y="185" width="18" height="4" rx="1"/>
+          <!-- minaret right -->
+          <rect x="222" y="160" width="11" height="115"/>
+          <polygon points="222,160 227.5,140 233,160"/>
+          <circle cx="227" cy="160" r="4.5" fill="#0a1020"/>
+          <rect x="219" y="188" width="16" height="4" rx="1"/>
+        </g>
+        <!-- dome — Masjid silhouette -->
+        <rect x="140" y="230" width="80" height="80" fill="#07101a"/>
+        <ellipse cx="180" cy="230" rx="42" ry="28" fill="#07101a"/>
+        <!-- tiny window lights hinting life -->
+        <g fill="#c9a030" opacity="0.35">
+          <rect x="15"  y="270" width="8" height="10" rx="1"/>
+          <rect x="45"  y="258" width="7" height="9" rx="1"/>
+          <rect x="250" y="255" width="8" height="10" rx="1"/>
+          <rect x="285" y="265" width="7" height="9" rx="1"/>
+          <rect x="315" y="268" width="9" height="11" rx="1"/>
+        </g>
+        <!-- ground -->
+        <rect x="0" y="320" width="360" height="100" fill="#030608"/>
+        <!-- ground reflection glow from the city -->
+        <ellipse cx="180" cy="322" rx="180" ry="14" fill="#0d1828" opacity="0.6"/>
+        <!-- crescent on dome -->
+        <circle cx="180" cy="200" r="6" fill="#c9a030" opacity="0.7"/>
+        <circle cx="184" cy="197" r="4.5" fill="#07101a"/>
+        <!-- a falling light hint — descending visitors -->
+        <line x1="100" y1="20" x2="95" y2="120" stroke="#c8dde8" stroke-width="0.5" opacity="0.2"/>
+        <line x1="180" y1="10" x2="178" y2="90" stroke="#c8dde8" stroke-width="0.5" opacity="0.15"/>
+        <line x1="260" y1="18" x2="258" y2="110" stroke="#c8dde8" stroke-width="0.5" opacity="0.2"/>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<div class="sky-fade-dawn" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- PART 3 — DAWN · The illuminated house                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="section s-dawn" id="part3">
+  <div class="section-inner">
+
+    <div class="section-text">
+      <h2 class="section-heading">The Embodiment of Light<br>Made His Blessed Advent</h2>
+      <div class="section-body">
+        <p>
+          When the sacred moment finally arrived — the moment creation had
+          been waiting for since before time itself — the Beloved of Allāh,
+          the Embodiment of Divine Light, Nūre Mujassam Ḥabībullāh,
+          our Master and the Crown of all Prophets,
+          Sayyidunā Rasūlullāh <span class="noble">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>,
+          made His blessed advent upon the earth —
+          radiant as a brilliant and illuminating Light.
+        </p>
+      </div>
+    </div>
+
+    <!-- Dawn illustration: a single house with light radiating from within -->
+    <div class="section-illus" aria-hidden="true">
+      <svg viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="skyDawn" cx="50%" cy="80%" r="80%">
+            <stop offset="0%" stop-color="#0f1e0a"/>
+            <stop offset="80%" stop-color="#0d1810"/>
+            <stop offset="100%" stop-color="#060e08"/>
+          </radialGradient>
+          <!-- light bursting from house -->
+          <radialGradient id="houseGlow" cx="50%" cy="55%" r="55%">
+            <stop offset="0%"  stop-color="#e8d07a" stop-opacity="0.45"/>
+            <stop offset="40%" stop-color="#c9a030" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#c9a030" stop-opacity="0"/>
+          </radialGradient>
+          <!-- horizon glow — pre-dawn light -->
+          <radialGradient id="horizonGlow" cx="50%" cy="100%" r="60%">
+            <stop offset="0%"  stop-color="#1a4020" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#1a4020" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- sky — deepest before dawn -->
+        <rect width="360" height="420" fill="url(#skyDawn)"/>
+        <!-- horizon glow hinting dawn -->
+        <rect width="360" height="420" fill="url(#horizonGlow)"/>
+        <!-- last stars, fewer -->
+        <g fill="#c8dde8" opacity="0.4">
+          <circle cx="30"  cy="30"  r="1.0"/>
+          <circle cx="80"  cy="20"  r="0.8"/>
+          <circle cx="270" cy="25"  r="0.9"/>
+          <circle cx="330" cy="15"  r="1.0"/>
+          <circle cx="150" cy="40"  r="0.7"/>
+          <circle cx="310" cy="50"  r="0.8"/>
+        </g>
+        <!-- house glow aura -->
+        <ellipse cx="180" cy="240" rx="120" ry="100" fill="url(#houseGlow)"/>
+        <!-- ground -->
+        <rect x="0" y="340" width="360" height="80" fill="#050e07"/>
+        <!-- ground glow -->
+        <ellipse cx="180" cy="342" rx="130" ry="15" fill="#1a5c3f" opacity="0.12"/>
+        <!-- distant hills silhouette -->
+        <ellipse cx="60"  cy="345" rx="100" ry="28" fill="#040c06" opacity="0.9"/>
+        <ellipse cx="310" cy="350" rx="90"  ry="22" fill="#040c06" opacity="0.9"/>
+        <!-- THE HOUSE — two-storey old Makkan style -->
+        <!-- shadow/base -->
+        <rect x="115" y="215" width="130" height="130" fill="#0d1e10"/>
+        <!-- main walls -->
+        <rect x="118" y="218" width="124" height="127" fill="#0f2214" stroke="#1a5c3f" stroke-width="0.8"/>
+        <!-- upper storey -->
+        <rect x="118" y="218" width="124" height="60" fill="#0d1e10" stroke="#1a5c3f" stroke-width="0.8"/>
+        <!-- flat roof parapet -->
+        <rect x="115" y="215" width="130" height="7" fill="#0a1a0d" stroke="#2e7d52" stroke-width="0.7"/>
+        <!-- upper parapet detail bumps -->
+        <g fill="#0a1a0d" stroke="#1a5c3f" stroke-width="0.5">
+          <rect x="120" y="208" width="14" height="10"/>
+          <rect x="140" y="208" width="14" height="10"/>
+          <rect x="160" y="208" width="14" height="10"/>
+          <rect x="180" y="208" width="14" height="10"/>
+          <rect x="200" y="208" width="14" height="10"/>
+          <rect x="220" y="208" width="14" height="10"/>
+        </g>
+        <!-- LIGHT from windows — warm golden glow -->
+        <!-- upper windows (lit) -->
+        <rect x="130" y="228" width="24" height="30" rx="12" fill="#e8d07a" opacity="0.85"/>
+        <rect x="168" y="228" width="24" height="30" rx="12" fill="#e8d07a" opacity="0.9"/>
+        <rect x="206" y="228" width="24" height="30" rx="12" fill="#e8d07a" opacity="0.85"/>
+        <!-- window outer glow halos -->
+        <ellipse cx="142" cy="243" rx="18" ry="22" fill="#e8d07a" opacity="0.12"/>
+        <ellipse cx="180" cy="243" rx="18" ry="22" fill="#e8d07a" opacity="0.15"/>
+        <ellipse cx="218" cy="243" rx="18" ry="22" fill="#e8d07a" opacity="0.12"/>
+        <!-- window frames -->
+        <rect x="128" y="226" width="28" height="34" rx="13" fill="none" stroke="#c9a030" stroke-width="1.2" opacity="0.7"/>
+        <rect x="166" y="226" width="28" height="34" rx="13" fill="none" stroke="#c9a030" stroke-width="1.2" opacity="0.8"/>
+        <rect x="204" y="226" width="28" height="34" rx="13" fill="none" stroke="#c9a030" stroke-width="1.2" opacity="0.7"/>
+        <!-- lower door (arched, lit from within) -->
+        <rect x="159" y="286" width="42" height="59" fill="#d4a820" opacity="0.6"/>
+        <ellipse cx="180" cy="286" rx="21" ry="11" fill="#d4a820" opacity="0.6"/>
+        <!-- door glow spilling onto ground -->
+        <ellipse cx="180" cy="345" rx="38" ry="8" fill="#e8d07a" opacity="0.18"/>
+        <!-- rays of light emanating from windows — subtle lines -->
+        <g stroke="#e8d07a" stroke-width="0.5" opacity="0.12">
+          <line x1="142" y1="240" x2="60"  y2="180"/>
+          <line x1="142" y1="240" x2="50"  y2="250"/>
+          <line x1="180" y1="240" x2="180" y2="140"/>
+          <line x1="180" y1="240" x2="100" y2="160"/>
+          <line x1="180" y1="240" x2="260" y2="160"/>
+          <line x1="218" y1="240" x2="300" y2="180"/>
+          <line x1="218" y1="240" x2="310" y2="250"/>
+          <line x1="180" y1="286" x2="180" y2="380"/>
+        </g>
+        <!-- door frame -->
+        <rect x="157" y="284" width="46" height="62" rx="21" fill="none" stroke="#c9a030" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- BALAGHAL ULA + SALAWAT                                                  -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="balaghal" aria-label="Balaghal Ula">
+  <div class="balaghal-inner">
+
+    <div class="balaghal-ar" style="font-family:'Crimson Pro',Georgia,serif;font-size:clamp(1rem,2.8vw,1.45rem);font-style:italic;direction:ltr;line-height:2.2;">
+      He attained the heights by His perfection &nbsp;·&nbsp; He dispelled the darkness by His beauty<br>
+      All His qualities are exalted beyond measure &nbsp;·&nbsp; Send Ṣalawāt upon Him and His Family
+    </div>
+    <div class="balaghal-attr">— Shaykh Saʿdī Shīrāzī <span style="font-family:'Scheherazade New',serif;font-size:1em;">رَحْمَةُ اللهِ عَلَيْهِ</span></div>
+
+    <span class="salawat-big">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- SOURCES                                                                  -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="sources" aria-label="Sources">
+  <div class="sources-inner">
+    <div class="sources-label">Sources</div>
+    <ul class="sources-list">
+      <li><em>Al-Bidāyah wan-Nihāyah</em> <span>— Imām Ibn Kathīr <span style="font-family:'Scheherazade New',serif">رَحْمَةُ اللهِ عَلَيْهِ</span></span></li>
+      <li><em>Al-Mawāhib al-Ladunniyyah</em> <span>— Imām al-Qasṭalānī <span style="font-family:'Scheherazade New',serif">رَحْمَةُ اللهِ عَلَيْهِ</span></span></li>
+      <li><em>Sharḥ al-Mawāhib</em> <span>— Imām Muḥammad al-Zurqānī <span style="font-family:'Scheherazade New',serif">رَحْمَةُ اللهِ عَلَيْهِ</span></span></li>
+      <li><em>Al-ʿIqd al-Jawāhir (Mawlid al-Barzanjī)</em> <span>— Imām al-Barzanjī <span style="font-family:'Scheherazade New',serif">رَحْمَةُ اللهِ عَلَيْهِ</span></span></li>
+      <li><em>Subul al-Hudā wa al-Rashād</em> <span>— Muḥammad ibn Yūsuf al-Ṣāliḥī al-Shāmī <span style="font-family:'Scheherazade New',serif">رَحْمَةُ اللهِ عَلَيْهِ</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- FOOTER                                                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <span class="footer-salawat">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>
+  <p class="footer-motto">Celebrating and showing gratitude for having him <span style="font-family:'Scheherazade New',serif">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span></p>
+  <nav aria-label="Footer navigation">
+    <ul class="footer-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/importance.html">Importance</a></li>
+      <li><a href="/proof.html">Quran &amp; Sunnah</a></li>
+      <li><a href="/history.html">History</a></li>
+      <li><a href="/ahl-e-bayt/">Ahl-e-Bayt</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <p class="footer-copy">This site carries no worldly claim — only love.</p>
+</footer>
+
+</body></html>
